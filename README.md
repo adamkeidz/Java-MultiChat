@@ -28,16 +28,26 @@ This application requires Java to be installed on your machine.
 
 ### Login
 
-The client sends a command to the server in the format "login [username] [password]". The server then checks if the username and password match. If they do, the server sends a response back to the client saying "you're online" and the client logs in.
+The client sends a command to the server in the format 
+```java
+login [username] [password]
+```
+The server then checks if the username and password match. If they do, the server sends a response back to the client saying "you're online" and the client logs in.
 
 ### Messaging
 
-The client sends a command to the server in the format "msg [recipient] [message]". The server then forwards the message to the intended recipient.
+The client sends a command to the server in the format 
+```java
+msg [recipient] [message]
+```
+The server then forwards the message to the intended recipient.
 
 ### Logging Off
 
-The client sends a command to the server saying "logoff" to disconnect from the server.
+The client sends a command to the server saying `logoff` to disconnect from the server.
 
 ### Handling Messages
 
-When the client receives a message from the server, it parses the message. If the message starts with "online", "offline", or "msg", it calls the appropriate handler method.
+When the client receives a message from the server, it parses the message. If the message starts with `online`, `offline`, or `msg`, it calls the appropriate handler method.
+
+---
